@@ -8,5 +8,5 @@ jobs:
     steps:
     - name: Checkout do projeto
       uses: actions/checkout@v4
-    - name: Cypress run
+    - name: Cypress run test
       uses: cypress-io/github-action@v6

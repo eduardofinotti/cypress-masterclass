@@ -1,0 +1,17 @@
+name: Cypress Qazando Tests
+on:
+  schedule:
+    - cron: '0 8-18 * * 1,5'
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout do projeto
+      uses: actions/checkout@v4
+    - name: Cypress run test
+      uses: cypress-io/github-action@v6
+      with:
+        browser: chrome
+        record: true
+      env:
+        CYPRESS_RECORD_KEY: 97146bfd-b88e-4276-980d-c39cd8c1accd

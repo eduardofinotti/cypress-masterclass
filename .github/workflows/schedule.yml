@@ -1,7 +1,7 @@
 name: Cypress Qazando Tests
 on:
-  pull_request:
-    branches: [master]
+  schedule:
+    - cron: '0 8-18 * * 1,5'
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
